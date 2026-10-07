@@ -1,0 +1,31 @@
+# Alternative au fichier .xcodeproj fourni (utile avec Xcode 15) :
+#   brew install xcodegen && xcodegen
+name: Lexicometre
+options:
+  bundleIdPrefix: fr.lexicometre
+  developmentLanguage: fr
+  deploymentTarget:
+    iOS: "17.0"
+targets:
+  Lexicometre:
+    type: application
+    platform: iOS
+    sources:
+      - path: Lexicometre
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: fr.lexicometre.app
+        PRODUCT_NAME: Lexicometre
+        MARKETING_VERSION: "1.0"
+        CURRENT_PROJECT_VERSION: "1"
+        SWIFT_VERSION: "5.0"
+        TARGETED_DEVICE_FAMILY: "1,2"
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_CFBundleDisplayName: Lexicomètre
+        INFOPLIST_KEY_LSApplicationCategoryType: public.app-category.education
+        INFOPLIST_KEY_UIApplicationSceneManifest_Generation: YES
+        INFOPLIST_KEY_UILaunchScreen_Generation: YES
+        INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone: UIInterfaceOrientationPortrait
+        INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad: "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight"
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
